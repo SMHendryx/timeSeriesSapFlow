@@ -13,12 +13,12 @@ library(dplyr)
 library(tools)
 
 # SET WORKING DIRECTORY
-setwd("/Users/seanhendryx/DATA/sapFlowData/Charleston/compiledSapFlowData")
+setwd("/Users/seanhendryx/DATA/sapFlowData/Charleston/compiledSapFlowData20160816")
 fileList <- list.files()
 
 #Read data into R, time stamp data (in month/day/year hour:minute:second, add group/location id, select columns of interest and return in new dataframe
 grabber <- function(file){
-  df <- read.table(file, header = TRUE, sep = ",", fileEncoding="latin1")
+  df <- read.table(file, header = TRUE, sep = ",", fileEncoding="latin1", skip = 17)
   df$DateTime <- as.POSIXct(paste(df$Date, df$Time), format="%m/%d/%y %H:%M:%S")
   df$id <- file_path_sans_ext(file)
   newdf <- select(df, DateTime, Uncorrected.Out..cm.hr., id)
