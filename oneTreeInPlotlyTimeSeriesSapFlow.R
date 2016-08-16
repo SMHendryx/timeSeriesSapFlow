@@ -56,17 +56,17 @@ p <- add_trace(p, x = lat1x, y = lat1y,
 )
 
 p <- add_trace(p, x = tapx, y = tapy,
-    name = "Tap Root",  # scatter's "y": /r/reference/#scatter-y
-  line = list(                        # line is a named list, valid keys: /r/reference/#scatter-line
-  color = "rgb(0,0,255)"      # line's "color": /r/reference/#scatter-line-color
+    name = "Tap Root",  
+  line = list(                        
+  color = "rgb(0,0,255)"      
 
     )
 )
 
 p <- add_trace(p, x = trunkx, y = trunky,
-    name = "Trunk Root",  # scatter's "y": /r/reference/#scatter-y
-  line = list(                        # line is a named list, valid keys: /r/reference/#scatter-line
-    color = "rgb(0,255, 0)"      # line's "color": /r/reference/#scatter-line-color
+    name = "Trunk Root",  
+  line = list(                        
+    color = "rgb(0,255, 0)"      
 
   )
 )
